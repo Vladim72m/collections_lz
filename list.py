@@ -16,4 +16,5 @@ for i in range(N):
 print(row) 
 row_max = max(row) 
 print(max(row)) 
-    
+row_min = min(row) 
+print(min(row)

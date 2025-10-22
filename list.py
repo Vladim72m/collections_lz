@@ -1,20 +1,23 @@
 N = int(input())
 a = 0
 b = 1
-i = 2
-row = [a, b]
-while i < N: 
-    a, b = b, a + b
-    row.append(b) 
-    i += 1
-print(row) 
+row = [a, b] # список
+d = 0 #счётчик
+while len(row) < N: 
+    a, b = b, a + b #  следующее число Фибоначчи
+    row.append(b)    # добавляем новое число в список
+print('Ряд Фибоначчи:', row) 
 for i in range(N): 
     if row[i] % 2 == 0: 
-        row[i] = row[i] * 2 
+        row[i] = row[i] * 2 # умножаем на два четные числа
     else: 
-        row[i] = row[i] ** 2
-print(row) 
-row_max = max(row) 
-print(max(row)) 
-row_min = min(row) 
-print(min(row)
+        row[i] = row[i] ** 2 # возводим в квадрат нечетные числа
+print('Преобразованный ряд:', row) 
+print('Минимальный элемент:', min(row))
+print('Максимальный элемент:', max(row)) 
+print("Длина списка:", len(row))
+e = sum(row) / N # считаем медианное значение
+for i in range(N):
+    if row[i] > e:  # считаем, сколько чисел больше среднего
+         d += 1
+print("Количество элементов, большее медианного значения списка:", d)

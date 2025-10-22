@@ -14,6 +14,6 @@ for i in range(N):
     else: 
         row[i] = row[i] ** 2
 print(row) 
-    row_max = max(row) 
-    print(max(row)) 
+row_max = max(row) 
+print(max(row)) 
     
